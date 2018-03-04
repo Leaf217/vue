@@ -6,8 +6,9 @@ import App from './App'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+//实例化一个根组件
 new Vue({
-  el: '#app',
+  el: '#app',//挂载到id为app的元素中，即index.html中body中的div中
   components: { App },//使用components局部注册组件
   template: '<App/>'
 })
