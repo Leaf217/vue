@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button v-on:click="onClickMe">Click Here</button>
+    <!--点击button，就会执行emitMyEvent这个方法-->
+    <button v-on:click="emitMyEvent">emit</button>
   </div>
 </template>
 
@@ -9,12 +10,12 @@
 export default {
   data () {
     return {
-      msg: 'Click!'
+      msg: '自定义事件'
     }
   },
   methods: {
-    onClickMe: function () {
-
+    emitMyEvent () {
+      this.$emit('my-event', this.msg );//触发my-event这个自定义事件，再去看父组件APP
     }
   }
 }
