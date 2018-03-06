@@ -10,14 +10,10 @@
       </li>
     </ul>
 
-    <input type="checkbox" id="flash" value="flash" v-model="bizLine">
-    <label for="flash">快车</label>
-    <input type="checkbox" id="bus" value="bus" v-model="bizLine">
-    <label for="bus">巴士</label>
-    <span>{{ bizLine}}</span>
+
 
     <!--一旦触发my-event自定义事件，就会执行onMyEvent这个方法-->
-    <hello-world v-on:my-event="onMyEvent"></hello-world>
+    <hello-world v-on:my-event="onMyEvent" number="5dfdf"></hello-world>
   </div>
 </template>
 

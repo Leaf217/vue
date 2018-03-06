@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p>{{ number }}</p>
     <!--点击button，就会执行emitMyEvent这个方法-->
     <button v-on:click="emitMyEvent">emit</button>
   </div>
@@ -8,6 +9,7 @@
 
 <script>
 export default {
+  props: ['number'],
   data () {
     return {
       msg: '自定义事件'
