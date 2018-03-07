@@ -10,10 +10,16 @@
       </li>
     </ul>
 
-
-
     <!--一旦触发my-event自定义事件，就会执行onMyEvent这个方法-->
     <hello-world v-on:my-event="onMyEvent" number="5dfdf"></hello-world>
+
+    <div class="trans">
+      <button v-on:click="show = !show">trans</button>
+      <transition name="my-trans">
+        <p v-show="show">i am show</p>
+      </transition>
+
+    </div>
   </div>
 </template>
 
@@ -27,7 +33,8 @@
         title: 'This is a todo list',
         items: Store.fetch(), //直接从localStorage中取出
         newItem: '',
-        bizLine: []
+        bizLine: [],
+        show: false
       }
     },
 
@@ -82,4 +89,30 @@
     color: #2c3e50;
     margin-top: 60px;
   }
+
+  /*当设置transition的name值为fade时应用的过渡效果*/
+  .fade-enter-active, .fade-leave-active {
+    /*什么属性使用过渡 过渡时间 过渡动画曲线*/
+    transition: opacity .5s ease-out;
+  }
+  .fade-enter, .fade-leave-active {
+    opacity: 0;
+  }
+  /* 其他的的状态的opacity默认都为1，所以不用设置*/
+
+
+  /*当设置transition的name值为my-trans时应用的过渡效果*/
+  .my-trans-enter-active, .my-trans-leave-active {
+    transition: all .5s ease-out;
+  }
+  .my-trans-enter {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  .my-trans-leave {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+
+
 </style>
