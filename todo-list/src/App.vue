@@ -109,7 +109,7 @@
     transform: translateY(-500px);
     opacity: 0;
   }
-  .my-trans-leave {
+  .my-trans-leave-to {
     transform: translateY(500px);
     opacity: 0;
   }
