@@ -11,12 +11,13 @@
     </ul>
 
     <!--一旦触发my-event自定义事件，就会执行onMyEvent这个方法-->
-    <hello-world v-on:my-event="onMyEvent" number="5dfdf"></hello-world>
+    <!--<hello-world v-on:my-event="onMyEvent" number="Hello World!"></hello-world>-->
 
     <div class="trans">
-      <button v-on:click="show = !show">trans</button>
+      <button v-on:click="toggleCom">toggle</button>
       <transition name="my-trans">
-        <p v-show="show">i am show</p>
+        <div v-bind:is="currentView"></div>
+        <!--<p v-if="show">i am show</p>-->
       </transition>
 
     </div>
@@ -26,6 +27,8 @@
 <script>
   import Store from './store.js';
   import HelloWorld from './components/HelloWorld';
+  import comA from './components/comA';
+  import comB from './components/comB';
   export default {
     //template中使用的数据
     data: function() {
@@ -34,13 +37,16 @@
         items: Store.fetch(), //直接从localStorage中取出
         newItem: '',
         bizLine: [],
-        show: false
+        show: false,
+        currentView: 'com-a'
       }
     },
 
     //注册组件
     components: {
-      HelloWorld: HelloWorld
+      'hello-world': HelloWorld,
+      'com-a': comA,
+      'com-b': comB
     },
 
     //观察items的变化，一旦有变化就对localStorage进行操作
@@ -72,6 +78,14 @@
       },
       onMyEvent (para) {
         console.log('onMyEvent' + para);
+      },
+      toggleCom () {
+        if (this.currentView === 'com-a') {
+          this.currentView = 'com-b';
+        }
+        else {
+          this.currentView = 'com-a';
+        }
       }
     }
   }

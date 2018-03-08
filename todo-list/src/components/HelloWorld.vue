@@ -14,7 +14,7 @@ export default {
   props: ['number'],
   data () {
     return {
-      msg: '自定义事件'
+      msg: 'Hello World component'
     }
   },
   methods: {
