@@ -117,7 +117,7 @@
 
   /*当设置transition的name值为my-trans时应用的过渡效果*/
   .my-trans-enter-active, .my-trans-leave-active {
-    transition: all .5s ease-out;
+    transition: all .5s linear;
   }
   .my-trans-enter {
     transform: translateY(-500px);
