@@ -42,7 +42,7 @@ img .bg {
     position: relative;
     cursor: pointer;
     border: 2px solid #fff;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     vertical-align: top;
     color: #fff;
     text-decoration: none;
