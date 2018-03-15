@@ -11,6 +11,6 @@ new Vue({
   el: '#app',
   components: { App },
   template: '<App/>'
-})
+});
 
 Vue.use(Toast);
