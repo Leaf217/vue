@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "Leaf217 <leaf_217@163.com>",
-  "private": true,
+  "private": false,
+  "main": "dist/vue-toast.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leaf217/vue/plugin-demo"
+  },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
