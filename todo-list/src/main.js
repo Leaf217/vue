@@ -12,5 +12,6 @@ Vue.use(VRouter);
 new Vue({
   el: '#app',//挂载到id为app的元素中，即index.html中body中的div中
   components: { App },//使用components局部注册组件
+  router,
   template: '<App/>'
 });
