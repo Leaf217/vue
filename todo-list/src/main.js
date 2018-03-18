@@ -6,7 +6,6 @@ import VRouter from 'vue-router'
 
 Vue.config.productionTip = false;
 Vue.use(VRouter);
-
 /* eslint-disable no-new */
 //实例化一个根组件
 new Vue({
