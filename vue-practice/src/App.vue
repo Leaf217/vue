@@ -25,6 +25,7 @@
 
 
     <router-link :to="{path: 'apple'}">to apple</router-link>
+    
     <router-link :to="{path: 'banana'}">to banana</router-link>
     <router-view></router-view>
   </div>
