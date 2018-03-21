@@ -5,6 +5,7 @@ import App from './App'
 import VueRouter from 'vue-router'
 import Apple from './components/apple'
 import Banana from './components/banana'
+import RedApple from './components/redApple'
 
 // Vue.config.productionTip = false;
 Vue.use(VueRouter); //VRouter是一个类
@@ -15,7 +16,13 @@ let router = new VueRouter({
   routes: [
     {
       path: '/apple',
-      component: Apple
+      component: Apple,
+      children: [
+        {
+          path: 'redApple',
+          component: RedApple
+        }
+      ]
     },
     {
       path: '/banana',
