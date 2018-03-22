@@ -1,27 +1,27 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <!--<h1 v-text="title"></h1>-->
-    <!--&lt;!&ndash;<input v-model="newItem" v-on:keyup.enter="addNew">&ndash;&gt;-->
-    <!--<input v-model="newItem">-->
-    <!--<button v-on:click="addNew">addItem</button>-->
-    <!--<ul>-->
-      <!--<li v-for="item in items" v-bind:class="{finished: item.isFinished}" v-on:click="toggleFinish(item)">-->
-        <!--{{item.label}}-->
-      <!--</li>-->
-    <!--</ul>-->
+    <h1 v-text="title"></h1>
+    <!--<input v-model="newItem" v-on:keyup.enter="addNew">-->
+    <input v-model="newItem">
+    <button v-on:click="addNew">addItem</button>
+    <ul>
+      <li v-for="item in items" v-bind:class="{finished: item.isFinished}" v-on:click="toggleFinish(item)">
+        {{item.label}}
+      </li>
+    </ul>
 
-    <!--&lt;!&ndash;一旦触发my-event自定义事件，就会执行onMyEvent这个方法&ndash;&gt;-->
-    <!--&lt;!&ndash;<hello-world v-on:my-event="onMyEvent" number="Hello World!"></hello-world>&ndash;&gt;-->
+    <!--一旦触发my-event自定义事件，就会执行onMyEvent这个方法-->
+    <hello-world v-on:my-event="onMyEvent" number="Hello World!"></hello-world>
 
-    <!--<div class="trans">-->
-      <!--<button v-on:click="toggleCom">toggle</button>-->
-      <!--<transition name="my-trans">-->
-        <!--<div v-bind:is="currentView"></div>-->
-        <!--&lt;!&ndash;<p v-if="show">i am show</p>&ndash;&gt;-->
-      <!--</transition>-->
+    <div class="trans">
+      <button v-on:click="toggleCom">toggle</button>
+      <transition name="my-trans">
+        <div v-bind:is="currentView"></div>
+        <!--<p v-if="show">i am show</p>-->
+      </transition>
 
-    <!--</div>-->
+    </div>
     <div>
       <router-link :to="{path: 'apple'}">to apple</router-link>
       <router-link :to="{path: 'banana'}">to banana</router-link>
