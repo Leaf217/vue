@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
     export default {
           name: "apple",
           data() {
@@ -13,6 +14,7 @@
           }
         }
     }
+    
 </script>
 
 <style scoped>
