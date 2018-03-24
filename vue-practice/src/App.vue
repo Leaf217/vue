@@ -12,7 +12,7 @@
     </ul>
 
     <!--一旦触发my-event自定义事件，就会执行onMyEvent这个方法-->
-    <hello-world v-on:my-event="onMyEvent" number="Hello World!"></hello-world>
+    <!--<hello-world v-on:my-event="onMyEvent" number="Hello World!"></hello-world>-->
 
     <div class="trans">
       <button v-on:click="toggleCom">toggle</button>
